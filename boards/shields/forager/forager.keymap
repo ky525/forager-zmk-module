@@ -84,7 +84,7 @@
         base {
             bindings = <
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
-            &lhm LCTRL A    &lhm LGUI S     &lhm LALT D     &lhm LSHFT F    &kp G                                           &kp H           &rhm RSHFT J    &rhm RALT K     &rhm RGUI L     &rhm RCTRL MINUS
+            &kp A           &kp S           &kp D           &kp F           &kp G                                           &kp H           &kp J           &kp K           &kp L           &kp MINUS
             &kp Z           &kp X           &kp C           &kp V           &kp B                                           &kp N           &kp M           &kp COMMA       &kp DOT         &kp RA(GRAVE)
                                                                             &sym_bspc 2 0   &kp SPACE       &kp ENTER       &lt NAV TAB
             >;
@@ -151,6 +151,46 @@
             timeout-ms = <50>;
             key-positions = <8 9>;
             bindings = <&kp DEL>;
+        };
+        combo_lctrl {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp LCTRL>;
+        };
+        combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LGUI>;
+        };
+        combo_lalt {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp LALT>;
+        };
+        combo_lshft {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp LSHFT>;
+        };
+        combo_rctrl {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp RCTRL>;
+        };
+        combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp RGUI>;
+        };
+        combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp RALT>;
+        };
+        combo_rshft {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp RSHFT>;
         };
     };
 };
