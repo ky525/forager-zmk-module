@@ -52,7 +52,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
@@ -92,19 +92,19 @@
 
         nav {
             bindings = <
-            &trans          &trans          &trans          &trans          &trans                                          &kp PAGE_UP     &kp LC(PG_UP)   &kp UP          &kp LC(PG_DN)   &kp DELETE
-            &trans          &kp LCTRL       &kp LALT        &kp LGUI        &trans                                          &kp PAGE_DOWN   &kp LEFT        &kp DOWN        &kp RIGHT       &kp BSLH
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &kp HOME        &kp END         &kp LC(SPACE)   &kp LC(SPACE)
-                                                                            &mo SYM         &kp LSHFT       &trans          &trans
+            &kp SQT         &kp DQT         &kp EXCL        &kp LBKT        &kp RBKT                                        &kp NUBS        &kp UNDER       &kp UP          &kp TILDE       &kp PRCNT
+            &kp AT          &kp SEMI        &kp DLLR        &kp LBRC        &kp RBRC                                        &kp HASH        &kp LEFT        &kp DOWN        &kp RIGHT       &kp CARET
+            &kp LT          &kp GT          &kp COLON       &kp LPAR        &kp RPAR                                        &kp AMPS        &kp PIPE        &kp GRAVE       &kp QMARK       &kp FSLH
+                                                                            &trans          &trans          &trans          &trans
             >;
         };
 
         sym {
             bindings = <
-            AS(N1)          AS(N2)          AS(N3)          AS(N4)          AS(N5)                                          AS(N6)          AS(N7)          AS(N8)          AS(N9)          AS(N0)
-            AS(GRAVE)       &sk LCTRL       &sk LALT        &sk LGUI        &sk LC(LALT)                                    AS(BSLH)        AS(MINUS)       AS(EQUAL)       AS(LBKT)        AS(RBKT)
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &kp ENTER
-                                                                            &trans          &trans          &kp LSHFT       &mo NAV
+            &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10
+            &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0 
+            &kp PG_DN       &kp PG_UP       &kp END         &kp PLUS        &kp MINUS                                       &kp STAR        &kp FSLH        &kp EQUAL       &kp F11         &kp F12
+                                                                            &trans          &trans          &trans          &trans
             >;
         };
 
@@ -141,6 +141,16 @@
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&kp LSHFT>;
+        };
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp DEL>;
         };
     };
 };
